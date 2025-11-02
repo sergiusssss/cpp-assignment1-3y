@@ -60,7 +60,7 @@ jobs:
           name: logs
       - name: Check output logs
         run: |
-          response_code=$( curl -o /dev/null -w '%{http_code}\n' -X POST -H "Content-Type: application/json" -d "{\"group_ids\": [\"Z-31\"], \"assignment_id\": \"Singleton\", \"commiter\": \"Vasya\", \"output\": \"$(cat output.txt)\"}" -L http://${{env.CHECKER_HOST}}/submit -s)
+          response_code=$( curl -o /dev/null -w '%{http_code}\n' -X POST -H "Content-Type: application/json" -d "{\"group_ids\": [\"Z-31\"], \"assignment_id\": \"Singleton\", \"commiter\": \"Vasya\", \"output\": \"$(cat output.txt)\"}" -L http://${{secrets.CHECKER_HOST}}/submit -s)
           if [[ "$response_code" -eq 200 ]]; then
             exit 0
           else
