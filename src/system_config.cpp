@@ -19,7 +19,7 @@ void SystemConfig::show()
      */
 }
 
-void SystemConfig::add_system(std::string user, std::string group)
+void SystemConfig::add_system(std::string user, std::string system)
 {
     // IMPLEMENT
 }
