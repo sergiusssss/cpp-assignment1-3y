@@ -15,7 +15,7 @@ public:
 
     void add_user(std::string user, std::string group); // IMPLEMENT
 private:
-    std::map<std::string, std::string> users_groups;
+    std::map<std::string, std::string> m_users_groups;
 };
 
 } // a1
