@@ -2,9 +2,7 @@ name: Students Check
 run-name: Students Check
 
 on:
-  pull_request:
-    branches:
-      - '**'
+  pull_request_target:
 
 jobs:
   check_files:
@@ -13,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       - name: Check main and workflow files not changed
         run: |
           main_sum=$(md5sum src/main.cpp | awk '{print $1}')
@@ -30,6 +30,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       - name: Build
         run: |
           cmake -B build .
