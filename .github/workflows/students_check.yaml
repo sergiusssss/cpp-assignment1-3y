@@ -40,7 +40,9 @@ jobs:
         with:
           name: executable
       - name: Run application
-        run: ./a1 | tee output.txt
+        run: |
+          chmod +x a1
+          ./a1 | tee output.txt
       - name: Upload logs
         uses: actions/upload-artifact@v4
         with:
