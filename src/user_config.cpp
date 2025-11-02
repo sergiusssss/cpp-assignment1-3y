@@ -16,7 +16,7 @@ void UserConfig::show()
      * 3. Kuliak - Z-21
      */
     std::cout << std::endl << "User configs:" << std::endl;
-    std::size_t counter = 0;
+    std::size_t counter = 1;
     for (const auto& item : m_users_groups) {
         std::cout << counter << ". " << item.user << " - " << item.group << std::endl;
         counter++;

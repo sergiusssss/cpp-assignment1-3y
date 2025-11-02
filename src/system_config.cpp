@@ -20,7 +20,7 @@ void SystemConfig::show()
      * 3. Kuliak - Linux
      */
     std::cout << std::endl << "System configs:" << std::endl;
-    std::size_t counter = 0;
+    std::size_t counter = 1;
     for (const auto& item : m_users_systems) {
         std::cout << counter << ". " << item.user << " - " << item.system << std::endl;
         counter++;
