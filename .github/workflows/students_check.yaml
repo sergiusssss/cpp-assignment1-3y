@@ -17,6 +17,8 @@ jobs:
         run: |
           main_sum=$(md5sum src/main.cpp | awk '{print $1}')
           workflow_sum=$(md5sum .github/workflows/students_check.yaml | awk '{print $1}')
+          echo $main_sum
+          echo $workflow_sum
           if [[ "$main_sum" -eq ${{secrets.MAIN_SUM}} && "$workflow_sum" -eq ${{secrets.WORKFLOW_SUM}} ]]; then
             exit 0
           else
