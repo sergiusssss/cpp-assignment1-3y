@@ -15,8 +15,8 @@ jobs:
         uses: actions/checkout@v5
       - name: Check main and workflow files not changed
         run: |
-          main_sum=$(md5sum --quiet src/main.cpp | awk '{print $1}')
-          workflow_sum=$(md5sum --quiet .github/workflows/students_check.yaml | awk '{print $1}')
+          main_sum=$(md5sum src/main.cpp | awk '{print $1}')
+          workflow_sum=$(md5sum .github/workflows/students_check.yaml | awk '{print $1}')
           if [[ "$main_sum" -eq ${{secrets.MAIN_SUM}} && "$workflow_sum" -eq ${{secrets.WORKFLOW_SUM}} ]]; then
             exit 0
           else
