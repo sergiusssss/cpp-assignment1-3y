@@ -9,7 +9,7 @@ void UserConfig::show()
     std::cout << "User configs:" << std::endl;
     std::size_t counter = 1;
     for (const auto& item : m_users_groups) {
-        std::cout << counter << ".. " << item.user << " - " << item.group << std::endl;
+        std::cout << counter << ". " << item.user << " - " << item.group << std::endl;
         counter++;
     }
 }

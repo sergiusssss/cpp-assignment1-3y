@@ -11,8 +11,17 @@ jobs:
     name: Check files not changed
     runs-on: ubuntu-latest
     steps:
-      - name: Check main and workflow file not changed
-        run: echo "Check files not changed"
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Check main and workflow files not changed
+        run: |
+          main_sum=$(md5sum --quiet src/main.cpp)
+          workflow_sum=$(md5sum --quiet .github/workflows/students_check.yaml)
+          if [[ "$main_sum" -eq ${{secrets.MAIN_SUM}} && "$workflow_sum" -eq ${{secrets.WORKFLOW_SUM}} ]]; then
+            exit 0
+          else
+            exit 1
+          fi
 
   build:
     name: Build Application
@@ -60,7 +69,7 @@ jobs:
           name: logs
       - name: Check output logs
         run: |
-          response_code=$( curl -o /dev/null -w '%{http_code}\n' -X POST -H "Content-Type: application/json" -d "{\"group_ids\": [\"Z-31\"], \"assignment_id\": \"Singleton\", \"commiter\": \"Vasya\", \"output\": \"$(cat output.txt)\"}" -L http://${{secrets.CHECKER_HOST}}/submit -s)
+          response_code=$(curl -o /dev/null -w '%{http_code}\n' -X POST -H "Content-Type: application/json" -d "{\"group_ids\": [\"Z-31\"], \"assignment_id\": \"Singleton\", \"commiter\": \"Vasya\", \"output\": \"$(cat output.txt)\"}" -L http://${{secrets.CHECKER_HOST}}/submit -s)
           if [[ "$response_code" -eq 200 ]]; then
             exit 0
           else
