@@ -13,13 +13,14 @@ void SystemConfig::show()
     std::cout << "System configs:" << std::endl;
     std::size_t counter = 1;
     for (const auto& item : m_users_systems) {
-        std::cout << counter << ". " << item.first << " - " << item.second << std::endl;
+        std::cout << counter << ". " << item.user << " - " << item.system << std::endl;
+        counter++;
     }
 }
 
 void SystemConfig::add_system(std::string user, std::string system)
 {
-    m_users_systems[user] = system;
+    m_users_systems.push_back({user, system});
 }
 
 }

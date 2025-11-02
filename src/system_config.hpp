@@ -1,6 +1,6 @@
 #pragma once
 
-#include <map>
+#include <vector>
 #include <string>
 
 namespace a1 {
@@ -15,7 +15,13 @@ public:
 
     void add_system(std::string user, std::string system); // IMPLEMENT
 private:
-    std::map<std::string, std::string> m_users_systems;
+    struct SystemEntity
+    {
+        std::string user;
+        std::string system;
+    };
+
+    std::vector<SystemEntity> m_users_systems;
 };
 
 } // a1

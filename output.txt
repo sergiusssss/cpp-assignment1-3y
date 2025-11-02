@@ -1,0 +1,8 @@
+User configs:
+1. Arsen'yev - Z-31
+2. Bykanov - Z-31
+3. Burba - Z-31
+System configs:
+1. Arsen'yev - Linux
+2. Bykanov - MacOS
+3. Burba - Windows
