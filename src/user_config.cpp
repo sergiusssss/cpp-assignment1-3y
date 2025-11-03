@@ -4,22 +4,19 @@
 
 namespace a1 {
 
-void UserConfig::show()
-{
-    // IMPLEMENT
-
-    // EXPECTED OUTPUT:
-    /*
-     * User configs:
-     * 1. Pustovit - Z-22
-     * 2. Soroka - K-41
-     * 3. Kuliak - Z-21
-     */
-}
-
 void UserConfig::add_user(std::string user, std::string group)
 {
-    // IMPLEMENT
+    m_users_groups.push_back({user, group});
 }
 
-} // a1
+void UserConfig::show()
+{
+    std::cout << "User configs:\n";
+    int i = 1;
+    for (auto &u : m_users_groups)
+    {
+        std::cout << i++ << ". " << u.user << " - " << u.group << "\n";
+    }
+}
+
+} 

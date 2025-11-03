@@ -1,27 +1,22 @@
-//
-// Created by Serhii Pustovit on 31.10.2025.
-//
-
 #include "system_config.hpp"
+
+#include <iostream>
 
 namespace a1 {
 
-void SystemConfig::show()
-{
-    // IMPLEMENT
-
-    // EXPECTED OUTPUT:
-    /*
-     * System configs:
-     * 1. Pustovit - MacOS
-     * 2. Soroka - Windows
-     * 3. Kuliak - Linux
-     */
-}
-
 void SystemConfig::add_system(std::string user, std::string system)
 {
-    // IMPLEMENT
+    m_users_systems.push_back({user, system});
 }
 
+void SystemConfig::show()
+{
+    std::cout << "System configs:\n";
+    int i = 1;
+    for (auto &u : m_users_systems)
+    {
+        std::cout << i++ << ". " << u.user << " - " << u.system << "\n";
+    }
 }
+
+} // namespace a1
