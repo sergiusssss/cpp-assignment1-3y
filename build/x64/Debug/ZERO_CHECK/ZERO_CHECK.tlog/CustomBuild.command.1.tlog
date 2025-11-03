@@ -1,0 +1,10 @@
+^C:\USERS\EGORK\SOURCE\REPOS\CPP-ASSIGNMENT1-3Y\BUILD\CMAKEFILES\EC7358D556E8EDD3FBDE8F2C6EBF9F04\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/egork/source/repos/cpp-assignment1-3y -BC:/Users/egork/Source/Repos/cpp-assignment1-3y/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/egork/Source/Repos/cpp-assignment1-3y/build/a1.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

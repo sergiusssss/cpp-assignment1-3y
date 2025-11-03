@@ -1,27 +1,24 @@
 #pragma once
-
-#include <vector>
 #include <string>
+#include <vector>
 
 namespace a1 {
-
 class UserConfig
 {
-public:
+  public:
     UserConfig() = default;
     ~UserConfig() = default;
 
     void show();
-
     void add_user(std::string user, std::string group);
-private:
-    struct GroupEntity
+
+  private:
+    struct UserEntity
     {
         std::string user;
         std::string group;
     };
 
-    std::vector<GroupEntity> m_users_groups;
+    std::vector<UserEntity> users_;
 };
-
-} // a1
+} // namespace a1
