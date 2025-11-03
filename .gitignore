@@ -1,4 +1,9 @@
-cmake-build-*/
-
-.idea/
-/.vs
+/build/
+/out/
+/.vs/
+/x64-Debug/
+*.log
+*.obj
+*.pdb
+*.idb
+*.db
