@@ -6,20 +6,20 @@ namespace a1 {
 
 void UserConfig::show()
 {
-    // IMPLEMENT
-
-    // EXPECTED OUTPUT:
-    /*
-     * User configs:
-     * 1. Pustovit - Z-22
-     * 2. Soroka - K-41
-     * 3. Kuliak - Z-21
-     */
+    std::cout << "User configs:\n";
+    int index = 1;
+    for(const auto& s : m_users_groups){
+        std::cout << index++ << ". " << s.user << " - " << s.group << std::endl;
+    }
 }
 
 void UserConfig::add_user(std::string user, std::string group)
 {
-    // IMPLEMENT
+    GroupEntity entity;
+    entity.user = user;
+    entity.group = group;
+    m_users_groups.push_back(entity);
 }
 
-} // a1
+}
+ // a1
