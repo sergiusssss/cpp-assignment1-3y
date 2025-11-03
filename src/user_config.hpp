@@ -1,5 +1,6 @@
 #pragma once
 
+#include "singleton.hpp"
 #include <vector>
 #include <string>
 

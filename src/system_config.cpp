@@ -3,25 +3,23 @@
 //
 
 #include "system_config.hpp"
+#include <iostream>
 
 namespace a1 {
 
 void SystemConfig::show()
 {
-    // IMPLEMENT
-
-    // EXPECTED OUTPUT:
-    /*
-     * System configs:
-     * 1. Pustovit - MacOS
-     * 2. Soroka - Windows
-     * 3. Kuliak - Linux
-     */
+    std::cout << "System configs:\n";
+    int index = 1;
+    for(const auto& s : m_users_systems){
+        std::cout << index++ << ". " << s.user << " - " << s.system << std::endl;
+    }
 }
 
 void SystemConfig::add_system(std::string user, std::string system)
 {
-    // IMPLEMENT
+    m_users_systems.emplace_back(std::move(user), std::move(system));
+    
 }
 
 }
