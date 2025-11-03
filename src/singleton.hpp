@@ -2,20 +2,22 @@
 
 namespace a1 {
 
-template <typename T>
+template<typename T>
 class Singleton
 {
-public:
+  public:
     static T& getInstance()
     {
         // IMPLEMENT
-        return *reinterpret_cast<T*>(reinterpret_cast<void*>(0)); // IMPLEMENT
+        static T instance;
+        return instance;
+        // IMPLEMENT
     }
 
     // IMPLEMENT: Mention required constructors
-private:
+  private:
     Singleton() = default;
     ~Singleton() = default;
 };
 
-}
+} // namespace a1

@@ -1,27 +1,24 @@
 #pragma once
-
-#include <vector>
 #include <string>
+#include <vector>
 
 namespace a1 {
-
 class SystemConfig
 {
-public:
+  public:
     SystemConfig() = default;
     ~SystemConfig() = default;
 
-    void show(); // IMPLEMENT
-
+    void show();                                           // IMPLEMENT
     void add_system(std::string user, std::string system); // IMPLEMENT
-private:
+
+  private:
     struct SystemEntity
     {
         std::string user;
         std::string system;
     };
 
-    std::vector<SystemEntity> m_users_systems;
+    std::vector<SystemEntity> m_users_systems; // хранит пользователей и их системы
 };
-
-} // a1
+} // namespace a1
