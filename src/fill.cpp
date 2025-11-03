@@ -5,8 +5,8 @@
 
 void fill_data()
 {
-    auto& users = Singleton<UserConfig>::getInstance();
-    auto& systems = Singleton<SystemConfig>::getInstance();
+    auto& users = a1::Singleton<a1::UserConfig>::getInstance();
+    auto& systems = a1::Singleton<a1::SystemConfig>::getInstance();
 
     
     users.add_user("Zakharenko", "Z-31");
