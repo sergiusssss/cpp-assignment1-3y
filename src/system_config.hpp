@@ -11,9 +11,9 @@ public:
     SystemConfig() = default;
     ~SystemConfig() = default;
 
-    void show(); // IMPLEMENT
+    void show();
 
-    void add_system(std::string user, std::string system); // IMPLEMENT
+    void add_system(std::string user, std::string system);
 private:
     struct SystemEntity
     {

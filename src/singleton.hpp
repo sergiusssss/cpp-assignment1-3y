@@ -8,11 +8,10 @@ class Singleton
 public:
     static T& getInstance()
     {
-        // IMPLEMENT
-        return *reinterpret_cast<T*>(reinterpret_cast<void*>(0)); // IMPLEMENT
+        static T instance;
+        return instance;
     }
 
-    // IMPLEMENT: Mention required constructors
 private:
     Singleton() = default;
     ~Singleton() = default;
