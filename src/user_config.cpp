@@ -7,6 +7,13 @@ namespace a1 {
 void UserConfig::show()
 {
     // IMPLEMENT
+    int counter = 1;
+
+    std::cout << "User configs:" << std::endl;
+    for (const auto& user : m_users_groups) {
+        std::cout << counter << ". " << user.user << " - " << user.group << std::endl;
+        counter++;
+    }
 
     // EXPECTED OUTPUT:
     /*
@@ -19,7 +26,7 @@ void UserConfig::show()
 
 void UserConfig::add_user(std::string user, std::string group)
 {
-    // IMPLEMENT
+    m_users_groups.push_back({user, group});
 }
 
 } // a1
