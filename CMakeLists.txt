@@ -9,6 +9,7 @@ add_executable(${PROJECT_NAME}
         src/system_config.cpp
         src/system_config.hpp
         src/fill.cpp
+        src/singleton.hpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE src/)

@@ -3,12 +3,17 @@
 //
 
 #include "system_config.hpp"
+#include <iostream>
 
 namespace a1 {
 
 void SystemConfig::show()
 {
-    // IMPLEMENT
+    std::cout << "System configs:\n";
+    for (std::size_t i = 0; i < m_users_systems.size(); ++i) // changed int -> std::size_t
+    {
+        std::cout << i + 1 << ". " << m_users_systems[i].user << " - " << m_users_systems[i].system << "\n";
+    }
 
     // EXPECTED OUTPUT:
     /*
@@ -21,7 +26,8 @@ void SystemConfig::show()
 
 void SystemConfig::add_system(std::string user, std::string system)
 {
-    // IMPLEMENT
+    std::size_t index = m_users_systems.size() + 1; 
+    m_users_systems.push_back({user, system});
 }
 
-}
+} // a1
