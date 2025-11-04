@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\шл\Documents\GitHub\cpp-assignment1-3y\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\шл\Documents\GitHub\cpp-assignment1-3y\src\user_config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\шл\Documents\GitHub\cpp-assignment1-3y\src\system_config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\шл\Documents\GitHub\cpp-assignment1-3y\src\fill.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\шл\Documents\GitHub\cpp-assignment1-3y\src\user_config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\шл\Documents\GitHub\cpp-assignment1-3y\src\system_config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\шл\Documents\GitHub\cpp-assignment1-3y\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{796F50CB-B7B9-3417-89FB-6F0D646727FE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D3CD78F5-7C92-3724-A69F-5AC2DF5F16BB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
