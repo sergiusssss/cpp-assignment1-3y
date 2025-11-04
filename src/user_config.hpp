@@ -2,18 +2,16 @@
 
 #include <vector>
 #include <string>
+#include <iostream>
 
 namespace a1 {
 
 class UserConfig
 {
 public:
-    UserConfig() = default;
-    ~UserConfig() = default;
-
     void show();
-
     void add_user(std::string user, std::string group);
+
 private:
     struct GroupEntity
     {
@@ -24,4 +22,4 @@ private:
     std::vector<GroupEntity> m_users_groups;
 };
 
-} // a1
+}

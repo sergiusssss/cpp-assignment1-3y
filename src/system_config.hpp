@@ -2,18 +2,16 @@
 
 #include <vector>
 #include <string>
+#include <iostream>
 
 namespace a1 {
 
 class SystemConfig
 {
 public:
-    SystemConfig() = default;
-    ~SystemConfig() = default;
+    void show();
+    void add_system(std::string user, std::string system);
 
-    void show(); // IMPLEMENT
-
-    void add_system(std::string user, std::string system); // IMPLEMENT
 private:
     struct SystemEntity
     {
@@ -24,4 +22,4 @@ private:
     std::vector<SystemEntity> m_users_systems;
 };
 
-} // a1
+}
