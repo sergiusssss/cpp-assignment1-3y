@@ -7,7 +7,7 @@ on:
 jobs:
   check_files:
     name: Check files not changed
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
@@ -25,7 +25,7 @@ jobs:
 
   build:
     name: Build Application
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: check_files
     steps:
       - name: Checkout repository
@@ -44,7 +44,7 @@ jobs:
 
   run:
     name: Run Application
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: build
     steps:
       - name: Download executable
@@ -63,7 +63,7 @@ jobs:
 
   check_output:
     name: Check that output correct
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: run
     steps:
       - name: Checkout repository
