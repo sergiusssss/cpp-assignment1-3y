@@ -12,3 +12,4 @@ add_executable(${PROJECT_NAME}
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE src/)
+configure_file(${CMAKE_SOURCE_DIR}/data.txt ${CMAKE_BINARY_DIR}/data.txt COPYONLY)
