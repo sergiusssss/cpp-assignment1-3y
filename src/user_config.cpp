@@ -19,7 +19,7 @@ void UserConfig::show()
 
 void UserConfig::add_user(std::string user, std::string group)
 {
-    // IMPLEMENT
+    m_users_groups.push_back({user, group});
 }
 
-} // a1
+} // a1  
