@@ -24,4 +24,4 @@ private:
     std::vector<GroupEntity> m_users_groups;
 };
 
-} // a1
+}

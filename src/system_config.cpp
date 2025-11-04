@@ -1,29 +1,23 @@
-#include "User_config.hpp"
-#include "System_config.hpp"
+#include "system_config.hpp"
+
 #include <iostream>
+#include <ostream>
+
 namespace a1 {
 
-void UserConfig::show()
+void SystemConfig::show()
 {
-   std::cout << "User configs:" << std::endl;
-   int counter = 1;
-   for (const auto user : m_users_groups) {
-       std::cout << counter << ". " << user.user << " - " << user.group << std::endl;
-       counter++;
-   }
-
-    // EXPECTED OUTPUT:
-    /*
-     * User configs:
-     * 1. Pustovit - MacOS
-     * 2. Soroka - Windows
-     * 3. Kuliak - Linux
-     */
+    std::cout << "System configs:" << std::endl;
+    int counter = 1;
+    for (const auto user : m_users_systems) {
+        std::cout << counter << ". " << user.user << " - " << user.system << std::endl;
+        counter++;
+    }
 }
 
 void SystemConfig::add_system(std::string user, std::string system)
 {
-   m_users_systems.push_back( {user, system});
+    m_users_systems.push_back({user, system});
 }
 
-}   
+}

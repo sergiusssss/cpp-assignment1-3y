@@ -1,14 +1,18 @@
-#include "singleton.hpp"
-#include "user_config.hpp"
-#include "system_config.hpp"
+#include <singleton.hpp>
 
-int main() {
-    auto& uc = a1::Singleton<a1::UserConfig>::getInstance();
-    auto& sc = a1::Singleton<a1::SystemConfig>::getInstance();
+#include <user_config.hpp>
+#include <system_config.hpp>
 
+extern void fill_data();
 
-    uc.show();
-    sc.show();
+int main()
+{
+    fill_data();
 
+    a1::Singleton<a1::UserConfig>::getInstance().show();
+    a1::Singleton<a1::SystemConfig>::getInstance().show();
     return 0;
-}  
+}
+
+
+
