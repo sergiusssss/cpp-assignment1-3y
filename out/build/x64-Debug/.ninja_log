@@ -1,0 +1,6 @@
+# ninja log v5
+3	167	7839856591453328	CMakeFiles/a1.dir/src/main.cpp.obj	3638a2ee13a0f25
+13	171	7839856591483438	CMakeFiles/a1.dir/src/fill.cpp.obj	29b24280e90aed2a
+7	268	7839856592466839	CMakeFiles/a1.dir/src/user_config.cpp.obj	7638fa437c2cb683
+10	268	7839856592466839	CMakeFiles/a1.dir/src/system_config.cpp.obj	6e666747ce6bf87f
+268	750	7839856594748567	a1.exe	684efd22e59a54e1
