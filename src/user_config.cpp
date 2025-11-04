@@ -10,6 +10,7 @@ void UserConfig::show()
     for (const auto &e : m_users_groups) {
         std::cout << i++ << ". " << e.user << " - " << e.group << std::endl;
     }
+    std::cout << std::endl; 
 }
 
 void UserConfig::add_user(std::string user, std::string group)
@@ -17,4 +18,4 @@ void UserConfig::add_user(std::string user, std::string group)
     m_users_groups.push_back({std::move(user), std::move(group)});
 }
 
-} 
+}
