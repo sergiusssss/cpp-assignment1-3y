@@ -8,43 +8,14 @@
 
 void fill_data()
 {
-    std::ifstream fin;
+    auto& users = a1::Singleton<a1::UserConfig>::getInstance();
+    auto& systems = a1::Singleton<a1::SystemConfig>::getInstance();
 
-    fin.open("data.txt");
-    if (!fin.is_open())
-    {
-        fin.open("../data.txt");
-        if (!fin.is_open())
-        {
-            fin.open("../../data.txt");
-        }
-    }
+    users.add_user("Al'terovych", "Z-32");
+    users.add_user("Buj", "Z-32");
+    users.add_user("Vyshnevs'kyj", "Z-32");
 
-    if (!fin.is_open())
-    {
-        std::cout << "No data.txt file" << std::endl;
-        return;
-    }
-
-    a1::UserConfig& user_cfg = a1::Singleton<a1::UserConfig>::getInstance();
-    a1::SystemConfig& sys_cfg = a1::Singleton<a1::SystemConfig>::getInstance();
-
-    std::string line;
-    while (std::getline(fin, line))
-    {
-        if (line.empty()) continue;
-
-        std::istringstream iss(line);
-        std::string name, group, system;
-
-        iss >> name >> group >> system;
-
-        if (!name.empty() && !group.empty() && !system.empty())
-        {
-            user_cfg.add_user(name, group);
-            sys_cfg.add_system(name, system);
-        }
-    }
-
-    fin.close();
+    systems.add_system("Al'terovych", "MacOS");
+    systems.add_system("Buj", "Linux");
+    systems.add_system("Vyshnevs'kyj", "MacOS");
 }
