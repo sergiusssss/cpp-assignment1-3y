@@ -5,16 +5,20 @@
 
 namespace a1 {
 
+template <typename T> class Singleton; 
+
 class UserConfig
 {
-public:
-    UserConfig() = default;
-    ~UserConfig() = default;
+    friend class Singleton<UserConfig>; 
 
+public:
     void show();
 
     void add_user(std::string user, std::string group);
 private:
+    UserConfig() = default;
+    ~UserConfig() = default;
+
     struct GroupEntity
     {
         std::string user;
