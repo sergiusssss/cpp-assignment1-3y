@@ -1,3 +1,0 @@
-C:/Users/шл/Documents/GitHub/cpp-assignment1-3y/build/CMakeFiles/a1.dir
-C:/Users/шл/Documents/GitHub/cpp-assignment1-3y/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/шл/Documents/GitHub/cpp-assignment1-3y/build/CMakeFiles/ZERO_CHECK.dir
