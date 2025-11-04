@@ -5,16 +5,20 @@
 
 namespace a1 {
 
+template <typename T> class Singleton; 
 class SystemConfig
 {
-public:
-    SystemConfig() = default;
-    ~SystemConfig() = default;
 
-    void show(); // IMPLEMENT
+    friend class Singleton<SystemConfig>; 
+
+public:
+    void show(); 
 
     void add_system(std::string user, std::string system); // IMPLEMENT
 private:
+    SystemConfig() = default;
+    ~SystemConfig() = default;
+
     struct SystemEntity
     {
         std::string user;
