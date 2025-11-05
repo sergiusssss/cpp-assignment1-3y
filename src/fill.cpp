@@ -14,7 +14,7 @@ void fill_data()
     uc.add_user("Shumko","Z-32");
     sc.add_system("Shumko", "Windows");
 
-    uc.add_user("Al'terovych","Z-32");
-    sc.add_system("Al'terovych", "MacOS");
+    uc.add_user("Akimov", "Z-32");
+    sc.add_system("Akimov", "MacOS");
 
 }
