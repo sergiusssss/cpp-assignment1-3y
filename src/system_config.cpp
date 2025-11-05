@@ -3,22 +3,21 @@
 
 namespace a1 {
 
+void SystemConfig::add_system(std::string user, std::string system)
+{
+    m_systems.push_back({user, system});
+}
+
 void SystemConfig::show()
 {
     std::cout << "System configs:\n";
-    for (size_t i = 0; i < m_users_groups.size(); ++i)
+    int index = 1;
+    for (const auto& s : m_systems)
     {
-        std::cout << i + 1 << ". " 
-                  << m_users_groups[i].user 
-                  << " - " 
-                  << m_users_groups[i].system 
-                  << "\n";
+        std::cout << index++ << ". " << s.user << " - " << s.system << "\n";
     }
 }
 
-void SystemConfig::add_system(std::string user, std::string system)
-{
-    m_users_groups.push_back({std::move(user), std::move(system)});
-}
-
 } // namespace a1
+
+        
