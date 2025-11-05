@@ -13,15 +13,15 @@ void fill_data_impl()
     auto& sysCfg = Singleton<SystemConfig>::getInstance();
 
     std::vector<std::pair<std::string, std::string>> users = {
-        {"Lavrov", "Z-31"},
-        {"Marchenko", "Z-31"},
-        {"Merkova", "Z-31"}
+        {"Arsen'yev", "Z-31"},
+        {"Bykanov", "Z-31"},
+        {"Burba", "Z-31"}
     };
 
     std::vector<std::pair<std::string, std::string>> systems = {
-        {"Lavrov", "Linux"},
-        {"Marchenko", "Windows"},
-        {"Merkova", "Windows"}
+        {"Arsen'yev", "Linux"},
+        {"Bykanov", "MacOS"},
+        {"Burba", "Windows"}
     };
 
     for (auto& u : users)
