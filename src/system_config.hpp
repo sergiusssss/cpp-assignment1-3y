@@ -2,26 +2,33 @@
 
 #include <vector>
 #include <string>
+#include <utility> 
+#include "singleton.hpp" 
 
 namespace a1 {
 
-class SystemConfig
+
+class SystemConfig : public Singleton<SystemConfig>
 {
 public:
+   
+    void show();
+    void add_system(std::string user, std::string system);
+
+   
+    friend class Singleton<SystemConfig>;
+
+private:
+    
+    using ConfigEntity = std::pair<std::string, std::string>; 
+
+    
+    std::vector<ConfigEntity> m_systems_config;
+    
+protected:
+    
     SystemConfig() = default;
     ~SystemConfig() = default;
-
-    void show(); // IMPLEMENT
-
-    void add_system(std::string user, std::string system); // IMPLEMENT
-private:
-    struct SystemEntity
-    {
-        std::string user;
-        std::string system;
-    };
-
-    std::vector<SystemEntity> m_users_systems;
 };
 
 } // a1
