@@ -5,5 +5,17 @@
 
 void fill_data()
 {
-    // IMPLEMENT: FILL DATA HERE
+    auto& uc = a1::Singleton<a1::UserConfig>::getInstance();
+    auto& sc = a1::Singleton<a1::SystemConfig>::getInstance();
+
+    uc.add_user("Akimov","Z-32");
+    sc.add_system("Akimov", "MacOS");
+
+    uc.add_user("Shumko","Z-32");
+    sc.add_system("Shumko", "Windows");
+
+    uc.add_user("Al'terovych","Z-32");
+    sc.add_system("Al'terovych", "MacOS");
+
+
 }
