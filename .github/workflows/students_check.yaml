@@ -53,8 +53,8 @@ jobs:
           name: executable
       - name: Run application
         run: |
-          chmod +x a1
-          ./a1 | tee output.txt
+          chmod +x build/a1
+          .build/a1 | tee output.txt
       - name: Upload logs
         uses: actions/upload-artifact@v4
         with:
