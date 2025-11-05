@@ -8,11 +8,15 @@ class Singleton
 public:
     static T& getInstance()
     {
-        // IMPLEMENT
-        return *reinterpret_cast<T*>(reinterpret_cast<void*>(0)); // IMPLEMENT
+        static T instance;
+        return instance;
     }
 
-    // IMPLEMENT: Mention required constructors
+     Singleton(const Singleton&) = delete;
+    Singleton& operator=(const Singleton&) = delete;
+    Singleton(Singleton&&) = delete;
+    Singleton& operator=(Singleton&&) = delete;
+
 private:
     Singleton() = default;
     ~Singleton() = default;
