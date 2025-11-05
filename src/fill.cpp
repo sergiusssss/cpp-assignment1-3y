@@ -7,14 +7,14 @@
 void fill_data() {
    
     a1::UserConfig& uc = a1::Singleton<a1::UserConfig>::getInstance();
-    a1::SystemConfig& sc = a1::Singleton<a1::SystemConfig>::getInstance();
+    a1::SystemConfig& sc = a1::Singleton<a1::SystemConfig>::getInstance();
  
     const std::string GROUP = "Z-31";
     const std::string SYSTEM = "Windows";
 
-    const std::string P_PREV = "Nazarenko";
-    const std::string P_SELF = "Marchenko";
-    const std::string P_NEXT = "Merkova";
+    const std::string P_PREV = "Marchenko";
+    const std::string P_SELF = "Merkova";
+    const std::string P_NEXT = "Nazarenko";
 
     uc.add_user(P_PREV, GROUP);
     uc.add_user(P_SELF, GROUP);
