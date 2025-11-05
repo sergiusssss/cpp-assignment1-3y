@@ -6,9 +6,8 @@
 
 void fill_data() {
    
-    a1::UserConfig& uc = a1::Singleton<UserConfig>::getInstance();
-    a1::SystemConfig& sc = a1::Singleton<SystemConfig>::getInstance();
-
+    a1::UserConfig& uc = a1::Singleton<a1::UserConfig>::getInstance();
+    a1::SystemConfig& sc = a1::Singleton<a1::SystemConfig>::getInstance();
  
     const std::string GROUP = "Z-31";
     const std::string SYSTEM = "Windows";
